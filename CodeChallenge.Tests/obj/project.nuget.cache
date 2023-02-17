@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J6O/sSlQSwmf0XqPbkAzZutGpR+E/KZ3M56uLH4wVTNJ92782QbxQ4wIzEC8GH2anHauwfmXJiltxwsQ05sy+A==",
+  "dgSpecHash": "/DylowXJD3n8lqzX0Nb0NKWhtKBWjv4XfMl+kduDAHD2m+b2SUSST1/fBA8tmo6gXIuEXqqETm1odx+e0QEFpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge.Tests\\CodeChallenge.Tests.Integration.csproj",
+  "projectFilePath": "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge.Tests\\CodeChallenge.Tests.Integration.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ecgif\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.5\\microsoft.aspnetcore.jsonpatch.6.0.5.nupkg.sha512",
     "C:\\Users\\ecgif\\.nuget\\packages\\microsoft.aspnetcore.mvc.testing\\6.0.5\\microsoft.aspnetcore.mvc.testing.6.0.5.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge.Tests\\CodeChallenge.Tests.Integration.csproj": {}
+    "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge.Tests\\CodeChallenge.Tests.Integration.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge.Tests\\CodeChallenge.Tests.Integration.csproj": {
+    "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge.Tests\\CodeChallenge.Tests.Integration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge.Tests\\CodeChallenge.Tests.Integration.csproj",
+        "projectUniqueName": "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge.Tests\\CodeChallenge.Tests.Integration.csproj",
         "projectName": "CodeChallenge.Tests.Integration",
-        "projectPath": "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge.Tests\\CodeChallenge.Tests.Integration.csproj",
+        "projectPath": "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge.Tests\\CodeChallenge.Tests.Integration.csproj",
         "packagesPath": "C:\\Users\\ecgif\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge.Tests\\obj\\",
+        "outputPath": "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ecgif\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj": {
-                "projectPath": "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj"
+              "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge\\CodeChallenge.csproj": {
+                "projectPath": "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge\\CodeChallenge.csproj"
               }
             }
           }
@@ -80,14 +80,14 @@
         }
       }
     },
-    "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj": {
+    "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge\\CodeChallenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj",
+        "projectUniqueName": "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge\\CodeChallenge.csproj",
         "projectName": "CodeChallenge",
-        "projectPath": "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj",
+        "projectPath": "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge\\CodeChallenge.csproj",
         "packagesPath": "C:\\Users\\ecgif\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge\\obj\\",
+        "outputPath": "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ecgif\\AppData\\Roaming\\NuGet\\NuGet.Config",
