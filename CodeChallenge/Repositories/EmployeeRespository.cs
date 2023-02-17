@@ -29,7 +29,9 @@ namespace CodeChallenge.Repositories
 
         public Employee GetById(string id)
         {
-            return _employeeContext.Employees.SingleOrDefault(e => e.EmployeeId == id);
+            return _employeeContext.Employees
+                .Include(d => d.DirectReports)
+                .SingleOrDefault(e => e.EmployeeId == id);
         }
 
         public Task SaveAsync()
@@ -40,6 +42,67 @@ namespace CodeChallenge.Repositories
         public Employee Remove(Employee employee)
         {
             return _employeeContext.Remove(employee).Entity;
+        }
+
+        /// <summary>
+        /// Get the complete reporting structure for a given employee id
+        /// </summary>
+        /// <param name="id">The employee's ID</param>
+        /// <returns>The Reporting Structure</returns>
+        public ReportingStructure GetReportingStructure(string id)
+        {
+            var employee = GetById(id);
+
+            if(employee == null)
+            {
+                return null;
+            }
+
+            var allReports = GetAllDirectReports(id);
+
+            if(allReports == null)
+            {
+                return null;
+            }
+
+            return new ReportingStructure(employee, allReports.Count);
+        }
+
+
+        /// <summary>
+        /// Recursive function to get all direct reports for an employee and add them to a flattened list for n depth
+        /// </summary>
+        /// <param name="id">The employee ID you want to retrieve data for</param>
+        /// <returns>The total flattened list of direct reports for the specified employee ID</returns>
+        private List<Employee> GetAllDirectReports(string id)
+        {
+            var employee = GetById(id);
+            
+            if(employee == null)
+            {
+                return null;
+            }
+
+            var directReports = employee.DirectReports.ToList();
+
+            var allReports = directReports;
+
+            // cache the list of reports to add because modifying lists inside a loop isn't allowed
+            List<Employee> reportsToAdd = null;
+
+            foreach(var e in directReports)
+            {
+                // recursively get each subordinate and their employees
+                reportsToAdd = GetAllDirectReports(e.EmployeeId);
+            }
+
+            // only add if we have anything to add
+            if(reportsToAdd != null)
+            {
+                allReports.AddRange(reportsToAdd);
+            }
+
+            return allReports;
         }
     }
 }

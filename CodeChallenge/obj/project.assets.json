@@ -702,11 +702,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj",
+      "projectUniqueName": "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge\\CodeChallenge.csproj",
       "projectName": "CodeChallenge",
-      "projectPath": "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge\\CodeChallenge.csproj",
+      "projectPath": "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge\\CodeChallenge.csproj",
       "packagesPath": "C:\\Users\\ecgif\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ecgif\\Downloads\\dotnet-code-challenge-July2022\\dotnet-code-challenge\\CodeChallenge\\obj\\",
+      "outputPath": "C:\\Users\\ecgif\\Documents\\Mindex\\mindex-code-test\\CodeChallenge\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ecgif\\AppData\\Roaming\\NuGet\\NuGet.Config",

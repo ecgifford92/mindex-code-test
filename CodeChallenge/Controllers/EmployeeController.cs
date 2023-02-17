@@ -58,5 +58,51 @@ namespace CodeChallenge.Controllers
 
             return Ok(newEmployee);
         }
+
+        [HttpGet("{id}/report", Name = "getEmployeeReports")]
+        public IActionResult GetEmployeeReports(String id)
+        {
+            _logger.LogDebug($"Received employee report get request for '{id}'");
+
+            var reportingStructure = _employeeService.GetReportingStructure(id);
+
+            if (reportingStructure == null)
+                return NotFound();
+
+            return Ok(reportingStructure);
+        }
+
+        [HttpGet("{id}/compensation", Name = "getEmployeeCompensations")]
+        public IActionResult GetEmployeeCompensations(String id)
+        {
+            _logger.LogDebug($"Received employee compensation get request for '{id}'");
+
+            var compensations = _employeeService.GetCompensationsForEmployee(id);
+
+            if (compensations == null)
+                return NotFound();
+
+            return Ok(compensations);
+        }
+
+        [HttpPost("{id}/compensation", Name = "createEmployeeCompensation")]
+        public IActionResult CreateEmployeeCompensation(String id, [FromBody]Compensation compensation)
+        {
+            _logger.LogDebug($"Received employee compensation post request for '{id}'");
+
+            try
+            {
+                var newCompensation = _employeeService.CreateCompensationForEmployee(id, compensation);
+
+                if (newCompensation == null)
+                    return NotFound();
+
+                return Ok(newCompensation);
+            }
+            catch(InvalidOperationException)
+            {
+                return Conflict();
+            }
+        }
     }
 }
