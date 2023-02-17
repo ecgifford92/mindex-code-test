@@ -53,7 +53,17 @@ namespace CodeChallenge.Repositories
         {
             var employee = GetById(id);
 
+            if(employee == null)
+            {
+                return null;
+            }
+
             var allReports = GetAllDirectReports(id);
+
+            if(allReports == null)
+            {
+                return null;
+            }
 
             return new ReportingStructure(employee, allReports.Count);
         }
@@ -67,6 +77,11 @@ namespace CodeChallenge.Repositories
         private List<Employee> GetAllDirectReports(string id)
         {
             var employee = GetById(id);
+            
+            if(employee == null)
+            {
+                return null;
+            }
 
             var directReports = employee.DirectReports.ToList();
 
