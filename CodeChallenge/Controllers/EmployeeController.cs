@@ -90,12 +90,19 @@ namespace CodeChallenge.Controllers
         {
             _logger.LogDebug($"Received employee compensation post request for '{id}'");
 
-            var newCompensation = _employeeService.CreateCompensationForEmployee(id, compensation);
+            try
+            {
+                var newCompensation = _employeeService.CreateCompensationForEmployee(id, compensation);
 
-            if(newCompensation == null)
-                return NotFound();
+                if (newCompensation == null)
+                    return NotFound();
 
-            return Ok(newCompensation);
+                return Ok(newCompensation);
+            }
+            catch(InvalidOperationException)
+            {
+                return Conflict();
+            }
         }
     }
 }

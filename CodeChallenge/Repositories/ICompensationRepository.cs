@@ -1,4 +1,5 @@
 ﻿using CodeChallenge.Models;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -11,5 +12,7 @@ namespace CodeChallenge.Repositories
         public Compensation Add(Compensation compensation);
 
         public Task SaveAsync();
+
+        public Compensation GetByEmployeeIdAndEffectiveDate(string id, DateTime effectiveDate);
     }
 }

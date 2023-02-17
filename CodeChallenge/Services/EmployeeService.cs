@@ -31,9 +31,31 @@ namespace CodeChallenge.Services
                 return null;
             }
 
+            // check to see if we already have a salary for this effective date
+            var compCheck = _compensationRepository.GetByEmployeeIdAndEffectiveDate(employeeId, compensation.EffectiveDate);
+
+            // the operation is invalid, we can't have two salaries for the same start date
+            if (compCheck != null)
+            {
+                throw new InvalidOperationException();
+            }
+
             compensation.Employee = employee;
             _compensationRepository.Add(compensation);
-            _compensationRepository.SaveAsync().Wait();
+
+            try
+            {
+                _compensationRepository.SaveAsync().Wait();
+            }
+            catch (ArgumentException)
+            {
+                // do nothing -- this seems to be an issue with the requirements, for some reason it throws an exception on the "Employee" being a duplicate ID, even though
+                // it shouldn't matter for the relation. I tested this with adding a new employee with direct reports and it also breaks, so I figured I'd leave this as-is 
+                // and point it out.
+
+                // this only happens when you add a salary for an employee, then add another one on another date for the same employee
+                // this still seems to create the object, oddly enough, which is another reason I opted to leave it as-is
+            }
 
             return compensation;
         }

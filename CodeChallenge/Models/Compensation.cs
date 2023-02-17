@@ -4,7 +4,6 @@ namespace CodeChallenge.Models
 {
     public class Compensation
     { 
-
         public String Id { get; set; }
 
         /// <summary>

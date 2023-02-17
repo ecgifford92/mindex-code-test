@@ -47,5 +47,14 @@ namespace CodeChallenge.Repositories
                 .Where(e => e.Employee.EmployeeId == id)
                 .ToList();
         }
+
+        public Compensation GetByEmployeeIdAndEffectiveDate(string id, DateTime effectiveDate)
+        {
+            return _compensationContext.Compensations
+                .Include(b => b.Employee)
+                .Where(e => e.Employee.EmployeeId == id)
+                .Where(f => f.EffectiveDate == effectiveDate)
+                .SingleOrDefault();
+        }
     }
 }
